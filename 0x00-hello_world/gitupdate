@@ -1,0 +1,6 @@
+#!/bin/sh
+find . -type f -not -perm 0644 -exec chmod 644 {} \+
+find . -type d -not -perm 0755 -exec chmod 755 {} \+
+git add .
+git commit -m 'C programming'
+git push origin main
