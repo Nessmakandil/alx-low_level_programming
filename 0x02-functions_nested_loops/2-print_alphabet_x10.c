@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include"main.h"
 /**
- *  print_alphabet - print lowercase alphabets from a to z - 10 times.
+ * print_alphabet_x10 - print lowercase alphabets from a to z - 10 times.
  *
  * Return: Always 0.
  */
