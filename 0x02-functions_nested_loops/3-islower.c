@@ -3,6 +3,8 @@
 /**
  * _islower - print lowercase alphabets from a to z.
  *
+ * c: is an int.
+ *
  * Return: 1 if c is lowercase and 0 otherwise.
  *
  */
