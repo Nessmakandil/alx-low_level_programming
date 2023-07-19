@@ -9,15 +9,15 @@
 void print_alphabet_x10(void)
 {
 	int i;
-	
-        for (i = 0; i < 10; i++)
+
+	for (i = 0; i < 10; i++)
 	{
 		char c;
 
-        	for (c = 'a'; c <= 'z'; ++c)
-        	{
-                	printf("%c", c);
-        	}
-        	printf("\n");
+		for (c = 'a'; c <= 'z'; ++c)
+		{
+			printf("%c", c);
+		}
+		printf("\n");
 	}
 }
