@@ -3,7 +3,7 @@
 /**
  * _islower - print lowercase alphabets from a to z.
  *
- * c: is an int.
+ * @c: is the char to be checked
  *
  * Return: 1 if c is lowercase and 0 otherwise.
  *
