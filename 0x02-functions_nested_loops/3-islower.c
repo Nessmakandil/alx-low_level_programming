@@ -3,9 +3,8 @@
 /**
  * _islower - print lowercase alphabets from a to z.
  *
- * Return: 1 if c is lowercase.
+ * Return: 1 if c is lowercase and 0 otherwise.
  *
- * Return: 0 otherwise.
  */
 
 int _islower(int c)
