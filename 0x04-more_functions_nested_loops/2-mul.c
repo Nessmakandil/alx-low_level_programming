@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * _isupper - checks for uppercase character.
+ * mul - multiplies two numbers.
  *
  * @a: first number to be multiplied.
  *
  * @b: second number to be multiplied.
  *
- * Return: 1 if c is a digit and 0 O.W.
+ * Return: operation output.
  */
 
 int mul(int a, int b)
 {
-        return (a*b);
+	return (a*b);
 }
