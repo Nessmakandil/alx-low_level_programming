@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isupper - checks for uppercase character.
+ * _isdigit - checks for digit character.
  *
  * @c: number to be checked.
  *
