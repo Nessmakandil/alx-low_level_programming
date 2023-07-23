@@ -9,7 +9,7 @@ int main(void)
 {
 	long int x, i, j, count, prime;
 
-	x = 1231952;
+	x = 612852475143;
 
 	for (i = 1; i <= x; i++)
 	{
