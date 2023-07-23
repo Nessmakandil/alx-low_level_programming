@@ -7,9 +7,9 @@
 
 int main(void)
 {
-	long long int x, i, j, count, prime;
+	long int x, i, j, count, prime;
 
-	x = 612852475143;
+	x = 1231952;
 
 	for (i = 1; i <= x; i++)
 	{
@@ -27,6 +27,6 @@ int main(void)
 				 prime = i; 
 		}
 	}
-	printf("%lld\n", prime);
+	printf("%ld\n", prime);
 	return (0);	
 }
