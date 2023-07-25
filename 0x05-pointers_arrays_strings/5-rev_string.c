@@ -9,19 +9,19 @@
 void rev_string(char *s)
 {
         int i, count;
+	char str = s[0];
 
         count = 0;
 
-        while (*s != '\0')
+        while (s[count] != '\0')
         {
                 count++;
-                s++;
         }
-        s--;
-        for (i = count - 1; i >= 0; i--)
+        for (i = 0; i < count; i++)
         {
-                printf("%c", *s);
-                s--;
-        }
-        printf("\n");
+		count--;
+		str = s[i];
+		s[i] = s[count];
+		s[count] = str;
+	}
 }
