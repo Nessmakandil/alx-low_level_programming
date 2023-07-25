@@ -16,10 +16,11 @@ void print_rev(char *str)
                 count++;
                 str++;
         }
-
+	str--;
 	for (i = count-1; i >= 0; i--)
 	{
-		printf("%c", str[i]);
+		printf("%c", *str);
+		str--;
 	}
         printf("\n");
 }
