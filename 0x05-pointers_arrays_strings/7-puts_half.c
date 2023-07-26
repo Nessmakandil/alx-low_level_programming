@@ -24,11 +24,11 @@ void puts_half(char *str)
 		n = count / 2 + 1;	
 
 	newstr = (char *) malloc((count - n + 1) * sizeof(char));
+
 	for (i = n; i <= count; i++)
 	{
 		newstr[j] = str[i];
 		j++;
 	}
 	printf("%s\n", newstr);
-
 }
