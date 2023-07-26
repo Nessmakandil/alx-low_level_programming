@@ -8,9 +8,11 @@
 
 void puts_half(char *str)
 {
-	int i, n, count;
+	int i, j, n, count;
+	char *newstr;
 
 	count = 0;
+	j = 0;
 
 	while (str[count] != '\0')
 	{
@@ -20,8 +22,14 @@ void puts_half(char *str)
 		n = count / 2;
 	else 
 		n = (count - 1) / 2;
+	
+	newstr = (char *) malloc((count - n + 1) * sizeof(char));
+
 	for (i = n; i <= count; i++)
-		printf("%c", str[i]);
-	printf("\n");
+	{
+		newstr[j] = str[i];
+		j++;
+	}
+	printf("%s\n", newstr);
 
 }
