@@ -21,7 +21,7 @@ void puts_half(char *str)
 	if (count % 2 == 0)
 		n = count / 2;
 	else 
-		n = (count - 1) / 2;
+		n = count / 2 - 1;
 	
 	newstr = (char *) malloc((count - n + 1) * sizeof(char));
 
