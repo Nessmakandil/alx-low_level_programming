@@ -20,13 +20,10 @@ char *leet(char *str)
 		count++;
 	for (i = 0; i < count; i++)
 	{
-		j = 0;
-
-		while (s1[j] != '\0')
+		for (j = 0; s1[j] != '\0'; j++)
 		{
 			if (str[i] == s1[j])
 				str[i] = s2[j];
-			j++;
 		}
 	}
 	return (str);
