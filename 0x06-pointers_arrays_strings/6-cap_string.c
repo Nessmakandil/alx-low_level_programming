@@ -18,14 +18,21 @@ char *cap_string(char *str)
 
 	for (i = 0; i < count; i++)
 	{
-		if ((str[i] == ',' || str[i] == ';' || str[i] ==  '.'\
-			|| str[i] == '!' || str[i] == '?' || str[i] ==  ')' || str[i] == '}')\
-			&& (str[i + 1] == ' ' && str[i + 2] >= 'a' && str[i + 2] <= 'z'))
-			str[i + 2] = str[i + 2] - 32;
-		else if ((str[i] == '\t' || str[i] == '\n' || str[i] == '.' ||\
-			str[i] == '\"' || str[i] == '(' || str[i] == '{' || str[i] == ' ')\
-			&& (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
+		if ((str[i] == ',' ||\
+		    str[i] == ';' ||\
+		    str[i] == '.' ||\
+		    str[i] == '!' ||\
+		    str[i] == '?' ||\
+		    str[i] == ')' ||\
+		    str[i] == '}' ||\
+		    str[i] == '\t' ||\
+		    str[i] == '\n' ||\
+		    str[i] == '"' ||\
+		    str[i] == ' ') &&
+		   (str[i + 1] >= 'a' && 
+		    str[i + 1] <= 'z'))
 			str[i + 1] = str[i + 1] - 32;
+
 	}
 	return (str);
 }
