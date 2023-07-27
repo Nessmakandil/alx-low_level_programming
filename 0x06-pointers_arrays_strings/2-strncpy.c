@@ -22,8 +22,6 @@ char *_strncpy(char *dest, char *src, int n)
                 count1++;
         while (src[count2] != '\0')
                 count2++;
-        if (n > count2)
-                n = count2;
         for (i = 0; i < n; i++)
         {
                 dest[i] = src[i];
