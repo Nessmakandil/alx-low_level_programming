@@ -8,8 +8,6 @@
 
 void print_number(int n)
 {
-	/*int w, x, y, z;*/
-
 	if (n < 0)
 	{
 		_putchar('-');
@@ -38,7 +36,7 @@ void print_number(int n)
 	if (n >= 10000)
         {
                 _putchar(n / 10000 + '0');
-		 _putchar((n - (n / 10000) * 10000) / 1000 + '0');
+		_putchar((n - (n / 10000) * 10000) / 1000 + '0');
                 _putchar((n - (n / 1000) * 1000) / 100 + '0');
                 _putchar((n - (n / 100) * 100) / 10 + '0');
                 _putchar(n - (n / 10) * 10 + '0');
