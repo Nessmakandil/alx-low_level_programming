@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <limits.h>
 /**
  * main - check the code
  *
@@ -21,7 +21,9 @@ int main(void)
     _putchar('\n');
     print_number(32767);
     _putchar('\n');
-    print_number(500000);
+    print_number(INT_MAX);
+    _putchar('\n');
+    print_number(INT_MIN);
     _putchar('\n');
     return (0);
 }
