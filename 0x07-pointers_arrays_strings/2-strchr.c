@@ -20,9 +20,10 @@ char *_strchr(char *s, char c)
 			ptr = s;
 			break;
 		}
-		else 
-			ptr = NULL;
 		s++;
 	}
+	if (*s == c)
+		ptr = s;
+
 	return ptr;
 }
