@@ -12,16 +12,16 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-        char *p = NULL;
+	char *p = NULL;
 
-        while (*s != '\0')
-        {
-                for (p = accept; *p != '\0'; p++)
-                {
-                        if (*s == *p)
+	while (*s != '\0')
+	{
+		for (p = accept; *p != '\0'; p++)
+		{
+			if (*s == *p)
 				return (s);
-                }
-                s++;
-        }
+		}
+		s++;
+	}
 	return ('\0');
 }
