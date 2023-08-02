@@ -25,5 +25,5 @@ char *_strchr(char *s, char c)
 	if (*s == c)
 		ptr = s;
 
-	return ptr;
+	return (ptr);
 }
