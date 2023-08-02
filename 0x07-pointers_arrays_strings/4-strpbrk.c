@@ -4,9 +4,8 @@
  * of any of the bytes in the string accept.
  *
  * @s: input string.
- *
  * @accept: string.
- * 
+ *
  * Return: a pointer to the byte in s that matches one of the bytes in accept,
  * or NULL if no such byte is found.
  */
