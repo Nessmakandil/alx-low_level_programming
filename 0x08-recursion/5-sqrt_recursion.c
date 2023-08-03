@@ -8,22 +8,19 @@
 
 int helper(int n, int i)
 {
-	if (i * i > n)
-		return helper(n, i - 1);
 	if (i * i == n)
 		return (i);
-	if (i <= 0)
+	if (i * i > n)
 		return (-1);
-	return (helper(n, i - 1));
+	return (helper(n, i + 1));
 }
 int _sqrt_recursion(int n)
 {
 	int ones = n - (n / 10) * 10;
-	int i = n/2;
 
 	if (n == 1 || n == 0) 
 		return (n);
-	if (n < 1 || ones == 2 || ones == 3 || ones == 7 || ones == 8)
+	if (n < 0 || ones == 2 || ones == 3 || ones == 7 || ones == 8)
 		return (-1);	
-	return (helper(n, i));
+	return (helper(n, 0));
 }
