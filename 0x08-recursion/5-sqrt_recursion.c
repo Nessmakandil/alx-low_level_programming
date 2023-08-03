@@ -25,9 +25,5 @@ int _sqrt_recursion(int n)
 		return (n);
 	if (n < 1 || ones == 2 || ones == 3 || ones == 7 || ones == 8)
 		return (-1);	
-	if (i * i == n)
-		return (i);
-	if (i <= 0)
-		return (-1);
 	return (helper(n, i));
 }
