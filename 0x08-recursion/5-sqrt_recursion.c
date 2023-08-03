@@ -8,6 +8,8 @@
 
 int helper(int n, int i)
 {
+	if (i * i > n)
+		return helper(n, i - 1);
 	if (i * i == n)
 		return (i);
 	if (i <= 0)
