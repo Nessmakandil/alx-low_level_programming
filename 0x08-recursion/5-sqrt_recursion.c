@@ -1,5 +1,5 @@
 #include "main.h"
-/** helper - a function that returns the natural square root of a number.
+/** helper - a helper function.
  *
  * @n: Input Number.
  * @i: input integer.
