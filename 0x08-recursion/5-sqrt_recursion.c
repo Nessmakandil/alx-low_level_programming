@@ -1,7 +1,6 @@
 #include "main.h"
 int helper(int n, int i);
-
-/** 
+/**
  * _sqrt_recursion - a function that returns the natural square root
  * of a number.
  *
@@ -29,6 +28,7 @@ int _sqrt_recursion(int n)
  *
  * Return: Int type.
  */
+
 int helper(int n, int i)
 {
 	if (i * i == n)
@@ -37,4 +37,3 @@ int helper(int n, int i)
 		return (-1);
 	return (helper(n, i + 1));
 }
-
