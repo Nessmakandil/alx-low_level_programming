@@ -1,20 +1,6 @@
 #include "main.h"
-/** helper - a helper function.
- *
- * @n: Input Number.
- * @i: input integer.
- *
- * Return: Int type.
- */
 
-int helper(int n, int i)
-{
-	if (i * i == n)
-		return (i);
-	if (i * i > n)
-		return (-1);
-	return (helper(n, i + 1));
-}
+int helper(int n, int i);
 
 /** _sqrt_recursion - a function that returns the natural square root of a number.
  *
@@ -33,3 +19,21 @@ int _sqrt_recursion(int n)
 		return (-1);	
 	return (helper(n, 0));
 }
+
+/** helper - a helper function.
+ *
+ * @n: Input Number.
+ * @i: input integer.
+ *
+ * Return: Int type.
+ */
+
+int helper(int n, int i)
+{
+        if (i * i == n)
+                return (i);
+        if (i * i > n)
+                return (-1);
+        return (helper(n, i + 1));
+}
+
