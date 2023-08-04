@@ -8,6 +8,17 @@
  *
  * Return: Int type.
  */
+
+/**
+ * helper - a helper function.
+ *
+ * @n: Input Number.
+ *
+ * @i: input integer.
+ *
+ * Return: Int type.
+ */
+
 int helper(int n, int i);
 
 int _sqrt_recursion(int n)
@@ -20,15 +31,6 @@ int _sqrt_recursion(int n)
 		return (-1);
 	return (helper(n, 0));
 }
-
-/** 
- * helper - a helper function.
- *
- * @n: Input Number.
- * @i: input integer.
- *
- * Return: Int type.
- */
 
 int helper(int n, int i)
 {
