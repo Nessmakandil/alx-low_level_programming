@@ -7,7 +7,7 @@
 
 int main(void)
 {
-        long int x, i, j, count, prime;
+        unsigned long x, i, j, count, prime;
 
         x = 612852475143;
 
@@ -27,7 +27,7 @@ int main(void)
                                  prime = i;
                 }
         }
-        printf("%ld\n", prime);
+        printf("%lu\n", prime);
         return (0);
 }
  
