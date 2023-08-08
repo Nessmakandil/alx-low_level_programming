@@ -32,5 +32,6 @@ int main(int argc, char *argv[])
 		*extension = '\0';
 	}
 	printf("./%s\n", baseName);
-	return (argc);
+	argc++;
+	return (0);
 }
