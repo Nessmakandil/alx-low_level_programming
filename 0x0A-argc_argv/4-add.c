@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
 	}
 	for (; i < argc; i++)
 	{
-		c = (int)argv[i];
-		if (c < 48 || c > 57)
+		c = atoi(argv[i]);
+		if (c == 0)
 		{
 			printf("Error\n");
 			return (1);
