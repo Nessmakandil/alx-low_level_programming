@@ -10,23 +10,28 @@
 
 int main(int argc, char *argv[])
 {
-        int add = 0;
-		int i = 1;
+	int add = 0;
+	int i = 1;
+	int c;
 
         if (argc == 1)
-        {
-                printf("0\n");
-				return (0);
-        }
-		if (argc < 3)
-        {
-                printf("Error\n");
-				return (1);
-        }
-		for (; i < argc; i++)
+	{
+		printf("0\n");
+		return (0);
+	}
+	for (; i < argc; i++)
+	{
+		c = (int)argv[i];
+		if (c < 48 || c > 57)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else 
 		{
 			add = add + atoi(argv[i]);
-		} 
-        printf("%d\n", add);
-        return (0);
+		}
+	}
+	printf("%d\n", add);
+	return (0);
 }
