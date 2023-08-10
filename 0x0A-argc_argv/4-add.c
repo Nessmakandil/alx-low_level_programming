@@ -12,10 +12,8 @@ int main(int argc, char *argv[])
 {
 	int add = 0;
 	int i = 1;
-	char *c = NULL;
-	unsigned int len;
-	unsigned int j = 0;
-
+	int c;
+	
 	if (argc == 1)
 	{
 		printf("0\n");
@@ -23,17 +21,14 @@ int main(int argc, char *argv[])
 	}
 	for (; i < argc; i++)
 	{
-		c = argv[i];
-		len = strlen(c);
-		for (j = 0; j < len; j++)
+		c = atoi(argv[i]);
+		if (c == 0)
 		{
-			if (!isdigit(c[j]))
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("Error\n");
+			return (1);
 		}
-		add = add + atoi(argv[i]);		
+		else
+			add = add + atoi(argv[i]);
 	}
 	printf("%d\n", add);
 	return (0);
