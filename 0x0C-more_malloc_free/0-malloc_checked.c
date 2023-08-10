@@ -11,5 +11,5 @@ void *malloc_checked(unsigned int b)
 {
 	if ((void*)malloc(b) == NULL)
 		exit (98);
-	return ((void*)malloc(b));
+	return (malloc(b));
 }
