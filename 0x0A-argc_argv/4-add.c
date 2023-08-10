@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	char *c = NULL;
 	unsigned int len;
 	unsigned int j;
-	
+
 	if (argc == 1)
 	{
 		printf("0\n");
@@ -24,8 +24,7 @@ int main(int argc, char *argv[])
 	for (; i < argc; i++)
 	{
 		c = argv[i];
-		len = strlen(c);
-		
+		len = strlen(c);		
 		for (j = 0; j < len; j++)
 		{
 			if (!isdigit(c[j]))
@@ -35,7 +34,6 @@ int main(int argc, char *argv[])
 			}
 		}		
 		add = add + atoi(c);
-
 	}
 	printf("%d\n", add);
 	return (0);
