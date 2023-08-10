@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int i = 1;
 	int c;
 
-        if (argc == 1)
+    if (argc == 1)
 	{
 		printf("0\n");
 		return (0);
@@ -33,5 +33,6 @@ int main(int argc, char *argv[])
 		}
 	}
 	printf("%d\n", add);
+	printf("%ld\n", strtoll("9e8", NULL, 0));
 	return (0);
 }
