@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * malloc_checked - a function that allocates memory using malloc.
+ * *array_range - creates an array of integers
+ * @min: minimum range of values stored
+ * @max: maximum range of values stored and number of elements
  *
- * @b: input size.
- *
- * Return: a pointer to the allocated memory
+ * Return: pointer to the new array
  */
 
 int *array_range(int min, int max)
