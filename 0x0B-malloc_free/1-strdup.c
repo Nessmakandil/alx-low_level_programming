@@ -5,7 +5,7 @@
  * which contains a copy of the string given as a parameter.
  *
  * @str: input string.
- * 
+ *
  * Return: output string.
  */
 
@@ -15,10 +15,10 @@ char *_strdup(char *str)
 	int i = 0;
 	char *ptr = NULL;
 
-	while (str[count])
+	while (str[count] != '\0')
 		count++;
 
-	ptr = malloc(count);
+	ptr = malloc(count + 1);
 
 	if (ptr == NULL || str == NULL)
 		return (NULL);
