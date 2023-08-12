@@ -5,8 +5,9 @@
  * 
  * @size: array length.
  * @c: initialization value.
+ * 
  * Return: NULL if size is zero or negative, array of chars o.w.
-*/
+ */
 
 char *create_array(unsigned int size, char c)
 {
