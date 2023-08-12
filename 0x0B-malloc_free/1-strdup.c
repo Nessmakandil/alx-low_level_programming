@@ -23,7 +23,7 @@ char *_strdup(char *str)
 
 	ptr = malloc(count + 1);
 
-	if (ptr == NULL || str == NULL)
+	if (ptr == NULL)
 		return (NULL);
 	while (str[i])
 	{
