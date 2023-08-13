@@ -10,15 +10,18 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, n, m = 0;
+	int i = 0;
+    int j = 0;
+    int n = 0;
+    int m = 0;
     char *ptr;
 
-	while (s1[i])
+	while (s1[i] != '\0')
 		i++;
-	while (s2[j])
+	while (s2[j] != '\0')
 		j++;
 
-	ptr = (char*) malloc(i + j + 1);
+	ptr = malloc(i + j + 1);
 
 	if (ptr == NULL)
 		return (NULL);
