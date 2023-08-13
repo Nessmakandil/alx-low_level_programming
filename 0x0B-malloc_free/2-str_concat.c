@@ -25,12 +25,12 @@ char *str_concat(char *s1, char *s2)
 
 	if (ptr == NULL)
 		return (NULL);
-	while (n < i)
+	while (n < i || i == 0)
 	{
 		ptr[n] = s1[n];
 		n++;
 	}
-	while (m < j)
+	while (m < j || j == 0)
 	{
 		ptr[n] = s2[m];
 		m++;
