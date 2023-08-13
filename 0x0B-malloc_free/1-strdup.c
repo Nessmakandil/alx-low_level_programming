@@ -19,10 +19,10 @@ char *_strdup(char *str)
 		return (NULL);
 	while (str[count] != '\0')
 		count++;
-        
+
 	ptr = malloc(count + 1);
 
-	if (str == NULL || ptr == NULL)
+	if (ptr == NULL)
 		return (NULL);
 	while (str[i])
 	{
