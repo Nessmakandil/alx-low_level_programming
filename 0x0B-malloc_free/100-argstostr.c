@@ -5,7 +5,7 @@
  *
  * @ac: the number of arguments.
  * @av: the arguments of the program.
- * 
+ *
  * Return: concatinated string.
  */
 
