@@ -8,7 +8,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	new = malloc(sizeof(dog_t));
 	
-	if (new == NULL)
+	if (new == NULL || name == NULL || owner == NULL)
 		return (NULL);
 
 	while (name[count1])
