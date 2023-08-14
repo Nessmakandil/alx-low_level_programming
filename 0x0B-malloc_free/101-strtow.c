@@ -2,7 +2,6 @@
 char **strtow(char *str)
 {
     char **ptr;
-    char *tmp;
     int count = 0;
     int wordscount = 0;
     int flag = 0;
@@ -34,13 +33,12 @@ char **strtow(char *str)
     {
         if ((str[i] == '\t' || str[i] == '\0' || str[i] == ' ') && count > 0)
         {
-            tmp = malloc(count + 1);
+            ptr[x] = malloc(count + 1);
             for (j = 0; j < count; j++)
             {
-                tmp[j] = str[i - count + j];
+                ptr[x][j] = str[i - count + j];
             }
-            tmp[j] = '\0';
-            ptr[x] = tmp;
+            ptr[x][j] = '\0';
             x++;
             count = 0;
         }
