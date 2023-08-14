@@ -12,7 +12,7 @@ char **strtow(char *str)
     while (str && str[i] != '\0')
     {
         i++;
-        if (str[i] == '\0' || str[i] == ' '|| (str[0] != ' ' && str[0] != '\t'))
+        if (str[i] == '\0' || str[i] == ' ')
         {
             flag = 0;
         }
@@ -32,7 +32,7 @@ char **strtow(char *str)
 
     while (str && str[i] != '\0')
     {
-        if ((str[i] == '\t' || str[i] == '\0' || str[i] == ' '|| (str[0] != ' ' && str[0] != '\t')) && count > 0)
+        if ((str[i] == '\t' || str[i] == '\0' || str[i] == ' ') && count > 0)
         {
             ptr[x] = malloc(count + 1);
             for (j = 0; j < count; j++)
