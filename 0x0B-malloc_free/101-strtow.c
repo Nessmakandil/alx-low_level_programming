@@ -12,7 +12,7 @@ char **strtow(char *str)
     while (str && str[i] != '\0')
     {
         i++;
-        if (str[i] == '\t' || str[i] == ' ')
+        if (str[i] == '\0' || str[i] == ' ')
         {
             flag = 0;
         }
@@ -26,9 +26,6 @@ char **strtow(char *str)
     ptr = malloc((wordscount + 1) * sizeof(char *));
 
     if (wordscount == 0 || str == NULL || ptr == NULL)
-        return NULL;
-
-    if (wordscount == 0 && *str == ' ')
         return NULL;
     
     i = 0;
