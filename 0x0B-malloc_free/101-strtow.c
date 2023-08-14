@@ -43,7 +43,7 @@ char **strtow(char *str)
             x++;
             count = 0;
         }
-        else if (str[i] != '\t' && str[i] != '\0' && str[i] != ' ')
+        else if (str[i] != '\t' && str[i] != ' ')
         {
             count++;            
         }
