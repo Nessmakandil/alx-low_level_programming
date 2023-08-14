@@ -2,6 +2,7 @@
 char **strtow(char *str)
 {
     char **ptr;
+    int count1 = 0;
     int count = 0;
     int wordscount = 0;
     int flag = 0;
@@ -9,10 +10,10 @@ char **strtow(char *str)
     int x = 0;
     int j;
 
-    while (str && str[i] != '\0')
+    while (str && str[count1] != '\0')
     {
-        i++;
-        if (str[i] == ' ' && str[i + 1] != '\0')
+        count1++;
+        if (str[count1] == '\0' || str[count1] == ' ')
         {
             flag = 0;
         }
@@ -28,13 +29,12 @@ char **strtow(char *str)
     if (wordscount == 0 || str == NULL || ptr == NULL)
         return NULL;
     
-    i = 0;
 
-    while (str && str[i] != '\0')
+    while (i <= count1)
     {
-        if ((str[i] == '\t' || str[i] == ' ') && count > 0)
+        if ((str[i] == '\t' || str[i] == '\0' || str[i] == ' ') && count > 0)
         {
-            ptr[x] = malloc(count + 1);
+            ptr[x] = malloc((count + 1) * sizeof(char *));
             for (j = 0; j < count; j++)
             {
                 ptr[x][j] = str[i - count + j];
@@ -43,7 +43,7 @@ char **strtow(char *str)
             x++;
             count = 0;
         }
-        else if (str[i] != '\t' && str[i] != ' '&& str[i + 1] != '\0')
+        else if ((str[i] != '\t' && str[i] != ' ') || str[i] == '\0')
         {
             count++;            
         }
