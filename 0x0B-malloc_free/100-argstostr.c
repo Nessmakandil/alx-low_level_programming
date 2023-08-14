@@ -11,7 +11,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i, x;
+	int i, x, count;
 	unsigned int j;
 	unsigned int sum = 0;
 	char *ptr;
@@ -22,7 +22,10 @@ char *argstostr(int ac, char **av)
 	}
 	for (i = 0; i < ac; i++)
 	{
-		sum = sum + strlen(av[i]) + 1;
+		count = 0;
+		while (*av[i])
+			count++;
+		sum = sum + count + 1;
 	}
 
 	ptr = malloc(sum + 1);
