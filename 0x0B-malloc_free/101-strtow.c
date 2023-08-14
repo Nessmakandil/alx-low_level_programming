@@ -25,7 +25,7 @@ char **strtow(char *str)
     }
     
     ptr = malloc((wordscount + 1) * sizeof(char *));
-    if (*str == ' ' || str == NULL || ptr == NULL)
+    if (wordscount == 0 || str == NULL || ptr == NULL)
         return NULL;
     
     i = 0;
