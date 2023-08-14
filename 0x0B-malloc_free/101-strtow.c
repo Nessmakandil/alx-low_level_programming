@@ -23,8 +23,8 @@ char **strtow(char *str)
 			wordscount++;
 		}
     }
-    
-    ptr = (char **) malloc((wordscount - 1) * sizeof(char *));
+
+    ptr = (char **) malloc((wordscount + 1) * sizeof(char *));
 
     if (wordscount == 0 || str == NULL || ptr == NULL)
         return NULL;
@@ -34,7 +34,7 @@ char **strtow(char *str)
     {
         if ((str[i] == '\t' || str[i] == '\0' || str[i] == ' ') && count > 0)
         {
-            ptr[x] = (char *) malloc((count) * sizeof(char *));
+            ptr[x] = (char *) malloc((count + 1) * sizeof(char *));
             for (j = 0; j < count; j++)
             {
                 ptr[x][j] = str[i - count + j];
