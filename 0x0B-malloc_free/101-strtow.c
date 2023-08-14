@@ -12,7 +12,7 @@ char **strtow(char *str)
     while (str && str[i] != '\0')
     {
         i++;
-        if (str[i] == '\0' || str[i] == ' ')
+        if (str[i] == '\0' || str[i] == ' '|| (str[0] != ' ' && str[0] != '\t'))
         {
             flag = 0;
         }
