@@ -2,9 +2,6 @@
 
 /**
  * printStatement - print.
- * 
- * @printStatementInitialized: global value.
- * 
  */
 
 int printStatementInitialized = 0;
