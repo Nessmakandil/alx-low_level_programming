@@ -10,9 +10,11 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-    list_t *lk = (struct list_t*) malloc(sizeof(list_t));
-    lk->str = str;
+    list_t *lk = (list_t *) malloc(sizeof(list_t));
+    lk->str = (char *) malloc(strlen(str) + 1);
+    strcpy(lk->str, str);
     lk->len = strlen(str);
-    lk->next = head;
+    lk->next = *head;
+    *head = lk;
 	return (lk);
 }
