@@ -3,7 +3,8 @@
  * add_node - a function that adds a new node
  * at the beginning of a list_t list.
  *
- * @h: linked list.
+ * @head: pointer to a linked list.
+ * @str: new input.
  *
  * Return: the number of nodes.
  */
