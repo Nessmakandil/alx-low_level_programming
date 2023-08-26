@@ -1,6 +1,6 @@
 section .data
-    hello db "Hello, Holberton", 0
-    format db "Hello, Holberton\n", 0
+    hello db "Hello, Holberton", 10  ; 10 represents the newline character
+    format db "%s", 0
 
 section .text
     extern printf
@@ -10,7 +10,7 @@ main:
     sub rsp, 8                ; align stack pointer
 
     mov rdi, format           ; set format string
-    mov rsi, 0                ; no additional argument needed
+    mov rsi, hello            ; set hello string
     xor eax, eax              ; clear eax
     call printf               ; call printf
 
