@@ -16,6 +16,8 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (lk == NULL || ik == NULL)
 	{
+        free(lk);
+        free(ik);
 		return (NULL);
 	}
 	if (str == NULL)
@@ -41,6 +43,5 @@ list_t *add_node_end(list_t **head, const char *str)
         }
         ik->next = lk;
     }
-
     return (lk);
 }
