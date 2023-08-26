@@ -11,13 +11,13 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-    list_t *lk = (list_t *) malloc(sizeof(list_t));
-    list_t *ik = (list_t *) malloc(sizeof(list_t));
+	list_t *lk = (list_t *) malloc(sizeof(list_t));
+	list_t *ik = (list_t *) malloc(sizeof(list_t));
 
 	if (lk == NULL || ik == NULL)
 	{
-        free(lk);
-        free(ik);
+		free(lk);
+		free(ik);
 		return (NULL);
 	}
 	if (str == NULL)
@@ -30,18 +30,19 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	lk->len = strlen(str);
 	lk->next = NULL;
-    if (*head == NULL)
-    {
-        *head = lk;
-    }
-    else
-    {
-        ik = *head;
-        while (ik->next != NULL)
-        {
-            ik = ik->next;
-        }
-        ik->next = lk;
-    }
-    return (lk);
+
+	if (*head == NULL)
+	{
+		*head = lk;
+	}
+	else
+	{
+		ik = *head;
+		while (ik->next != NULL)
+		{
+			ik = ik->next;
+		}
+		ik->next = lk;
+	}
+	return (lk);
 }
