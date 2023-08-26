@@ -3,6 +3,8 @@
 /**
  * printStatement - print.
  * 
+ * @printStatementInitialized: global.
+ * 
  */
 
 int printStatementInitialized = 0;
