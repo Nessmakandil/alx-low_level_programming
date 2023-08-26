@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 /**
- * sum_them_all - sum all inputs.
+ * print_numbers - sum all inputs.
  *
  * @separator: string to be printed between numbers.
  * @n: number of inputs.
@@ -17,11 +17,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		printf("%d", va_arg(list, int));
-        if (separator != NULL && i != n - 1)
-        {
-            printf("%s", separator);
-        }     
+		if (separator != NULL && i != n - 1)
+		{
+			printf("%s", separator);
+		}
 	}
-    printf("\n");
+	printf("\n");
 	va_end(list);
 }
