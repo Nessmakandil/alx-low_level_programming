@@ -1,5 +1,5 @@
 section .data
-    hello db "Hello, Holberton", 10  ; 10 represents the newline character
+    hello db "Hello, Holberton", 0
     format db "%s", 0
 
 section .text
