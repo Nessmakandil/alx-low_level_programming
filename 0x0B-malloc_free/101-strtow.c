@@ -96,6 +96,6 @@ char **strtow(char *str)
 		}
 		i++;
 	}
-	ptr[x] = NULL;
+	ptr[x] = '\0';
 	return (ptr);
 }
