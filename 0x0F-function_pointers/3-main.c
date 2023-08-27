@@ -17,8 +17,9 @@ int main(int argc, char *argv[])
 	if (argc < 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
+
 	ch = argv[2];
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
@@ -26,12 +27,12 @@ int main(int argc, char *argv[])
 				|| strcmp(ch, "/") == 0 || strcmp(ch, "%") == 0))
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 	if (b == 0 && (strcmp(ch, "/") == 0 || strcmp(ch, "%") == 0))
 	{
 		printf("Error\n");
-		exit (100);
+		exit(100);
 	}
 	f = get_op_func(ch);
 	printf("%d\n", f(a, b));
