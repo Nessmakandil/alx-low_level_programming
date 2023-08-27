@@ -1,24 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * main - check the codes.
+ *
+ * @argc: number of parameters.
+ * @argv: array of strings.
+ *
+ * Return: 0.
+ */
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
+	unsigned char *ptr = (unsigned char *)main;
+	int i = 0;
+	int num_bytes;
 
-    unsigned char *ptr = (unsigned char *)main;
-    int i = 0;
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	
+	num_bytes = atoi(argv[1]);
 
-    if (argc != 2) {
-        printf("Error\n");
-        return 1;
-    }
-
-    int num_bytes = atoi(argv[1]);
-
-    if (num_bytes <= 0) {
-        printf("Error\n");
-        return 2;
-    }
-
-    while (i < num_bytes)
+	if (num_bytes <= 0)
+	{
+		printf("Error\n");
+		return (2);
+	}
+	while (i < num_bytes)
 	{
 		if (i != 0)
 		{
@@ -28,6 +38,5 @@ int main(int argc, char *argv[]) {
 		i++;
 	}
 	printf("\n");
-
-    return 0;
+	return 0;
 }
