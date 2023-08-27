@@ -11,23 +11,34 @@
 int main(int argc, char *argv[])
 {
     int (*f)(int, int);
+    char *ch;
+    int a, b;
+
     if (argc < 4)
     {
         printf("Error\n");
         exit (98);
     }
-    if (argv[2] != "+" && argv[2] != "-"
-    && argv[2] != "*" && argv[2] != "/" && argv[2] != "%")
+    
+    ch = argv[2];
+    a = atoi(argv[1]);
+    b = atoi(argv[3]);
+    
+    if (!(strcmp(ch, "+") == 0 || strcmp(ch, "-") == 0
+    || strcmp(ch, "*") == 0 || strcmp(ch, "/") == 0 || strcmp(ch, "%") == 0))
     {
         printf("Error\n");
         exit (99);
     }
-    if (argv[3] == 0 && (argv[2] == "/" || argv[2] == "%"))
+    if (b == 0 && (strcmp(ch, "/") == 0|| strcmp(ch, "%") == 0))
     {
         printf("Error\n");
         exit (100);
     }
-    f = get_op_func(argv[2]);
-    printf("%d\n", f(atoi(argv[1]), atoi(argv[3])));
+    f = get_op_func(ch);
+    if (f != NULL)
+    {
+        printf("%d\n", f(a, b));
+    }
     return (0);
 }
