@@ -1,23 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void print_opcodes(int num_bytes) {
-    unsigned char *ptr = (unsigned char *)print_opcodes;
+int main(int argc, char *argv[]) {
+
+    unsigned char *ptr = (unsigned char *)main;
     int i = 0;
 
-    while (i < num_bytes)
-	{
-		if (i != 0)
-		{
-			printf(" ");
-		}
-		printf("%02x", ptr[i]);
-		i++;
-	}
-	printf("\n");
-}
-
-int main(int argc, char *argv[]) {
     if (argc != 2) {
         printf("Error\n");
         return 1;
@@ -30,7 +18,16 @@ int main(int argc, char *argv[]) {
         return 2;
     }
 
-    print_opcodes(num_bytes);
+    while (i < num_bytes)
+	{
+		if (i != 0)
+		{
+			printf(" ");
+		}
+		printf("%02x", ptr[i]);
+		i++;
+	}
+	printf("\n");
 
     return 0;
 }
