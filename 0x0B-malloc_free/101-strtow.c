@@ -1,23 +1,17 @@
 #include "main.h"
 /**
- * strtow - splits a string into words
+ * leng - splits a string into words
  *
  * @str: string to split
  *
- * Return: pointer to an array of strings (Success) 
+ * Return: pointer to an array of strings (Success)
  * or NULL (Error)
  */
-
-char **strtow(char *str)
+int leng(char *str)
 {
-	char **ptr;
 	int count1 = 0;
-	int count = 0;
 	int wordscount = 0;
 	int flag = 0;
-	int i = 0;
-	int x = 0;
-	int j;
 
 	while (str && str[count1] != '\0')
 	{
@@ -32,17 +26,34 @@ char **strtow(char *str)
 			wordscount++;
 		}
 	}
+	return (wordscount);
+}
+/**
+ * strtow - splits a string into words
+ *
+ * @str: string to split
+ *
+ * Return: pointer to an array of strings (Success)
+ * or NULL (Error)
+ */
+char **strtow(char *str)
+{
+	char **ptr;	
+	int count = 0;	
+	int i = 0;
+	int x = 0;
+	int j;
+	int wordscount = leng(str);	
 
 	ptr = (char **) malloc((wordscount + 1) * sizeof(char *));
 
 	if (wordscount == 0 || str == NULL || ptr == NULL)
-		return NULL;
+		return (NULL);
 	while (i <= count1)
 	{
 		if ((str[i] == '\t' || str[i] == '\0' || str[i] == ' ') && count > 0)
 		{
-			ptr[x] = (char *) malloc((count + 1) * sizeof(char *));
-			
+			ptr[x] = (char *) malloc((count + 1) * sizeof(char *));	
 			for (j = 0; j < count; j++)
 			{
 				ptr[x][j] = str[i - count + j];
@@ -58,5 +69,5 @@ char **strtow(char *str)
 		i++;
 	}
 	ptr[x] = NULL;
-	return ptr;
+	return (ptr);
 }
