@@ -59,9 +59,7 @@ void multiply(char *num1, char *num2)
 			result[pos2] = product % 10;
 		}
 	}
-
 	i = 0;
-
 	while (i < result_len && result[i] == 0)
 	{
 		i++;
@@ -78,7 +76,6 @@ void multiply(char *num1, char *num2)
 		}
 		printf("\n");
 	}
-	free(result);
 }
 /**
  * main - a program that multiplies two numbers.
