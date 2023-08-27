@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
 	ch = argv[2];
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
+
 	if (!(strcmp(ch, "+") == 0 || strcmp(ch, "-") == 0 || strcmp(ch, "*") == 0 
 				|| strcmp(ch, "/") == 0 || strcmp(ch, "%") == 0))
 	{
