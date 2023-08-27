@@ -76,6 +76,7 @@ void multiply(char *num1, char *num2)
 		}
 		printf("\n");
 	}
+	free(result);
 }
 /**
  * main - a program that multiplies two numbers.
