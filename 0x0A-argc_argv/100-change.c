@@ -42,10 +42,14 @@ int main(int argc, char *argv[]) {
         printf("Error\n");
         return 1;
     }
-
-    cents = atoi(argv[1]);
-    minCoins = calculateMinCoins(cents);
-    printf("%d\n", minCoins);
-
+    if (atoi(argv[1]) < 0) {
+        printf("0\n");
+    }
+    else
+    {
+        cents = atoi(argv[1]);
+        minCoins = calculateMinCoins(cents);
+        printf("%d\n", minCoins);
+    }
     return 0;
 }
