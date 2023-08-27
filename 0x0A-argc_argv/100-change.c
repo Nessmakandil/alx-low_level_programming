@@ -7,19 +7,22 @@
  * 
  * Return: count;
  */
-
-int calculateMinCoins(int cents) {
+int calculateMinCoins(int cents)
+{
     int coins[] = {25, 10, 5, 2, 1};
     int numCoins = sizeof(coins) / sizeof(coins[0]);
     int count = 0;
     int i;
 
-    if (cents < 0) {
+    if (cents < 0)
+    {
         printf("0\n");
         return 0;
     }
-    for (i = 0; i < numCoins; i++) {
-        while (cents >= coins[i]) {
+    for (i = 0; i < numCoins; i++)
+    {
+        while (cents >= coins[i])
+        {
             cents -= coins[i];
             count++;
         }
@@ -31,18 +34,20 @@ int calculateMinCoins(int cents) {
  *
  * @argc: count of argv.
  * @argv: string.
- * 
+ *
  * Return: 0.
  */
-int main(int argc, char *argv[]) {
-    
+int main(int argc, char *argv[])
+{
     int cents, minCoins;
 
-    if (argc != 2) {
+    if (argc != 2)
+    {
         printf("Error\n");
         return 1;
     }
-    if (atoi(argv[1]) < 0) {
+    if (atoi(argv[1]) < 0)
+    {
         printf("0\n");
     }
     else
