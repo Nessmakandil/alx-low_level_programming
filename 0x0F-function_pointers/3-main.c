@@ -24,9 +24,8 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	if (!(strcmp(ch, "+") == 0 || strcmp(ch, "-") == 0 ||
-		strcmp(ch, "*") == 0 || strcmp(ch, "/") == 0 ||
-		strcmp(ch, "%") == 0))
+	if (!(strcmp(ch, "+") == 0 || strcmp(ch, "-") == 0 || strcmp(ch, "*") == 0 
+				|| strcmp(ch, "/") == 0 || strcmp(ch, "%") == 0))
 	{
 		printf("Error\n");
 		exit (99);
@@ -36,6 +35,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit (100);
 	}
+
 	f = get_op_func(ch);
 	printf("%d\n", f(a, b));
 	return (0);
