@@ -97,5 +97,5 @@ int main(int argc, char *argv[])
 	check_input(num1);
 	check_input(num2);
 	multiply(num1, num2);
-	return 0;
+	return (0);
 }
