@@ -76,7 +76,11 @@ char **strtow(char *str)
 	ptr = (char **) malloc((wordscount + 1) * sizeof(char *));
 
 	if (wordscount == 0 || str == NULL || ptr == NULL)
+	{
+		free(ptr);
 		return (NULL);
+	}
+		
 	while (i <= count1)
 	{
 		if ((str[i] == '\t' || str[i] == '\0' || str[i] == ' ') && count > 0)
