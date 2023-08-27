@@ -36,9 +36,6 @@ int main(int argc, char *argv[])
         exit (100);
     }
     f = get_op_func(ch);
-    if (f != NULL)
-    {
-        printf("%d\n", f(a, b));
-    }
+    printf("%d\n", f(a, b));
     return (0);
 }
