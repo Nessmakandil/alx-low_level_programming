@@ -25,6 +25,7 @@ int splir_words(char *str)
 			wordscount++;
 		}
 	}
+	printf("words count %d\n", wordscount);
 	return (wordscount);
 }
 /**
@@ -53,6 +54,7 @@ int leng(char *str)
 			wordscount++;
 		}
 	}
+	printf("str len %d\n", count1);
 	return (count1);
 }
 /**
@@ -65,7 +67,7 @@ int leng(char *str)
  */
 char **strtow(char *str)
 {
-	char **ptr;	
+	char **ptr;
 	int count = 0;	
 	int i = 0;
 	int x = 0;
@@ -80,12 +82,12 @@ char **strtow(char *str)
 		free(ptr);
 		return (NULL);
 	}
-		
 	while (i <= count1)
 	{
 		if ((str[i] == '\t' || str[i] == '\0' || str[i] == ' ') && count > 0)
 		{
 			ptr[x] = (char *) malloc((count + 1) * sizeof(char *));
+			printf("%d\n", count);
 			for (j = 0; j < count; j++)
 			{
 				ptr[x][j] = str[i - count + j];
