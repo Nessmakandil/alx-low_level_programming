@@ -87,7 +87,7 @@ char **strtow(char *str)
 		if ((str[i] == '\t' || str[i] == '\0' || str[i] == ' ') && count > 0)
 		{
 			ptr[x] = (char *) malloc((count + 1) * sizeof(char *));
-			memset(ptr[x], 0, (count + 1));	
+			memset(ptr[x], 0, (count));	
 			for (j = 0; j < count; j++)
 			{
 				ptr[x][j] = str[i - count + j];
