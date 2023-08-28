@@ -57,7 +57,7 @@ int leng(char *str)
 }
 /**
  * strtow - splits a string into words
- * 
+ *
  * @str: string to split
  *
  * Return: pointer to an array of strings (Success)
@@ -74,7 +74,6 @@ char **strtow(char *str)
 	int wordscount = splir_words(str);
 	
 	ptr = (char **) malloc((wordscount + 1) * sizeof(char *));
-
 	if ((*str) == '\0' || wordscount == 0 || str == NULL || ptr == NULL)
 	{
 		free(ptr);
