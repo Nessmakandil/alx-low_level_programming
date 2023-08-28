@@ -11,13 +11,13 @@ int helper(char *s, int left, int right)
 {
     if (left >= right)
     {
-        return 1;
+        return (1);
     }
     if (s[left] != s[right])
     {
-        return 0;
+        return (0);
     }
-    return helper(s, left + 1, right - 1);
+    return (helper(s, left + 1, right - 1));
 }
 /**
  * is_palindrome -  A string is called a palindrome if
@@ -30,5 +30,5 @@ int is_palindrome(char *s)
     int left = 0;
     int right = strlen(s) - 1;
 
-    return helper(s, left, right);
+    return (helper(s, left, right));
 }
