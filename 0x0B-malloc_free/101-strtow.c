@@ -72,9 +72,7 @@ char **strtow(char *str)
 	int j;
 	int count1 = leng(str);
 	int wordscount = splir_words(str);
-
 	ptr = (char **) malloc((wordscount + 1) * sizeof(char *));
-	
 	if ((*str) == '\0' || wordscount == 0 || str == NULL || ptr == NULL)
 	{
 		free(ptr);
