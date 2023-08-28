@@ -23,7 +23,7 @@ int main(void)
     new->next = head;
     head = new;
     n = listint_len(head);
-    printf("-> %lu elements\n", n);
+    printf("-> %u elements\n", n);
     free(new);
     return (0);
 }
