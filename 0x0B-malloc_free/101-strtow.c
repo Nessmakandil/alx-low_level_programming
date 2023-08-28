@@ -57,7 +57,7 @@ int leng(char *str)
 }
 /**
  * strtow - splits a string into words
- *
+ * 
  * @str: string to split
  *
  * Return: pointer to an array of strings (Success)
@@ -66,7 +66,7 @@ int leng(char *str)
 char **strtow(char *str)
 {
 	char **ptr;
-	int count = 0;	
+	int count = 0;
 	int i = 0;
 	int x = 0;
 	int j;
