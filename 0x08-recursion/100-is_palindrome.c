@@ -7,11 +7,14 @@
  * @right: position.
  * Return: 1 for true, 0 for false.
  */
-int helper(char *s, int left, int right) {
-    if (left >= right) {
+int helper(char *s, int left, int right)
+{
+    if (left >= right)
+    {
         return 1;
     }
-    if (s[left] != s[right]) {
+    if (s[left] != s[right])
+    {
         return 0;
     }
     return helper(s, left + 1, right - 1);
@@ -22,7 +25,8 @@ int helper(char *s, int left, int right) {
  * @s: input string.
  * Return: 1 for true, 0 for false.
  */
-int is_palindrome(char *s) {
+int is_palindrome(char *s)
+{
     int left = 0;
     int right = strlen(s) - 1;
 
