@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * free_listint2 - prints all the elements of a list_t list.
+ * pop_listint - prints all the elements of a list_t list.
  * @head: linked list.
  * Return: the number of nodes.
  */
@@ -22,6 +22,5 @@ int pop_listint(listint_t **head)
     else
     {
         return (0);
-    }
-    
+    }    
 }
