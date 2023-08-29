@@ -1,7 +1,9 @@
 #include "lists.h"
 /**
- * sum_listint - prints all the elements of a list_t list.
+ * insert_nodeint_at_index - prints all the elements of a list_t list.
  * @head: linked list.
+ * @idx: new item index.
+ * @n: new item value.
  * Return: the number of nodes.
  */
 
