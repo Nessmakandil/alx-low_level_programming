@@ -4,7 +4,6 @@
  * @head: linked list.
  * Return: the number of nodes.
  */
-
 int sum_listint(listint_t *head)
 {
 	listint_t *current;
