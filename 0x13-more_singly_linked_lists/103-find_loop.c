@@ -1,5 +1,9 @@
 #include "lists.h"
-
+/**
+ * find_listint_loop - prints all the elements of a list_t list.
+ * @head: linked list.
+ * Return: the number of nodes.
+ */
 listint_t *find_listint_loop(listint_t *head)
 {
     listint_t *slow, *fast;
@@ -28,6 +32,5 @@ listint_t *find_listint_loop(listint_t *head)
             return (slow);
         }
     }
-
     return (NULL);
 }
