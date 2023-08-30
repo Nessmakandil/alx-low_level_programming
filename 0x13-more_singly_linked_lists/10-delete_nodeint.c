@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * insert_nodeint_at_index - prints all the elements of a list_t list.
+ * delete_nodeint_at_index - prints all the elements of a list_t list.
  * @head: linked list.
  * @index: item index.
  * Return: the number of nodes.
