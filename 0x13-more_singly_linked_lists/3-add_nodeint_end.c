@@ -17,10 +17,8 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		free(new);
 		return (NULL);
 	}
-	
 	new->n = n;
 	new->next = NULL;
-
 	if (*head == NULL)
 	{
 		*head = new;
