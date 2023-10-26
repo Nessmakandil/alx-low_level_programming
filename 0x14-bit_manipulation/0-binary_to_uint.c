@@ -4,10 +4,11 @@
  * @b: pointing to a string of 0 and 1 chars.
  * Return: integer.
  */
+
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int val = 0;
-	
+
 	if (b == NULL)
 		return (0);
 	while (*b)
@@ -15,7 +16,7 @@ unsigned int binary_to_uint(const char *b)
 		if (*b != '0' && *b != '1')
 			return (0);
 		val <<= 1;
-		val += *b-'0';
+		val += *b - '0';
 		b++;
 	}
 	return (val);
