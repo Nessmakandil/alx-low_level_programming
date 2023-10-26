@@ -24,11 +24,8 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
-		else
-		{
-			num = num + ch * pow(2, count);
-			count--;
-		}
+		num = num + ch * pow(2, count);
+		count--;
 		i++;
 	}
 	return (num);
