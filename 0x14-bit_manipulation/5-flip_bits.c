@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * clear_bit - calculates the number of bits you would need to 
+ * flip_bits - calculates the number of bits you would need to 
  * flip to get from one number to another
  * @n: digit
  * @m: starting from 0 of the bit you want to get
