@@ -6,6 +6,17 @@
 #include <string.h>
 #include <math.h>
 #include <limits.h>
+
+/**
+ * @i: int
+ * @c: char
+ */
+union
+{
+	int i;
+	char c[sizeof(int)];
+} u;
+	
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
