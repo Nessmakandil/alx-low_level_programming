@@ -8,7 +8,7 @@
 int main(int argc, char *argv[]) {
     
     FILE *fd_from = fopen(argv[1], "r");
-    FILE *fd_to = fopen(argv[2], "r+");
+    FILE *fd_to = fopen(argv[2], "w");
     char buffer[BUFFER_SIZE];
     size_t bytes_read, bytes_written;
 
