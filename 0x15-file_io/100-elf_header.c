@@ -58,12 +58,20 @@ void display_error(const char* message) {
 }
 
 void display_elf_header(const Elf64_Ehdr* header) {
-    printf("Magic:   %.4s\n", header->e_ident);
-    printf("Class:                             %s\n", (header->e_ident[EI_CLASS] == ELFCLASS32) ? "ELF32" : "ELF64");
-    printf("Data:                              %s\n", (header->e_ident[EI_DATA] == ELFDATA2LSB) ? "2's complement, little endian" : "2's complement, big endian");
-    printf("Version:                           %d (current)\n", header->e_ident[EI_VERSION]);
-    printf("Type:                              %s\n", (header->e_type == ET_EXEC) ? "EXEC (Executable file)" : (header->e_type == ET_DYN) ? "DYN (Shared object file)" : (header->e_type == ET_REL) ? "REL (Relocatable file)" : "Others");
-    printf("Entry point address:               0x%lx\n", (unsigned long)header->e_entry);
+    int i;
+    printf("ELF Header:\n");
+    printf("  Magic:   ");
+    for (i = 0; i < 16; i++) {
+        printf("%02x ", header->e_ident[i]);
+    }
+    printf("\n");
+    printf("  Class:                             %s\n", (header->e_ident[EI_CLASS] == ELFCLASS32) ? "ELF32" : "ELF64");
+    printf("  Data:                              %s\n", (header->e_ident[EI_DATA] == ELFDATA2LSB) ? "2's complement, little endian" : "2's complement, big endian");
+    printf("  Version:                           %d (current)\n", header->e_ident[EI_VERSION]);
+    printf("  OS/ABI:                            UNIX - System V\n");
+    printf("  ABI Version:                       0\n");
+    printf("  Type:                              %s\n", (header->e_type == ET_EXEC) ? "EXEC (Executable file)" : (header->e_type == ET_DYN) ? "DYN (Shared object file)" : (header->e_type == ET_REL) ? "REL (Relocatable file)" : "Others");
+    printf("  Entry point address:               0x%lx\n", (unsigned long)header->e_entry);
 }
 
 int main(int argc, char* argv[]) {
