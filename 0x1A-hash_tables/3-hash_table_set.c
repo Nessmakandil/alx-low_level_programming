@@ -15,7 +15,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	new_item->key = (char *) key;
 	new_item->value = (char *) value;
-	ht->array[index] = new_item;
+	if (ht->array[index] == NULL)
+	{
+		ht->array[index] = new_item;
+	}
+	if (ht->array[index] != NULL)
+	{
+		new_item->next = *(ht->array);
+		*(ht->array) = new_item;
+	}
 	if (ht->array[index])
 	{
 		return (1);
