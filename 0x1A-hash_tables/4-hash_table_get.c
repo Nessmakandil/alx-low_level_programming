@@ -10,7 +10,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
     {
         temp = ht->array[idx];
     }
-    if (temp == NULL)
+    if (temp == NULL || temp->value == NULL)
     {
         return (NULL);
     }
